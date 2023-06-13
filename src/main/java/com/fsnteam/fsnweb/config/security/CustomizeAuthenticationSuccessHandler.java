@@ -31,7 +31,7 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         httpServletResponse.getWriter().write(JSON.toJSONString(Result.success()));
         //cors限制访问源
         //本地：http://localhost:8081
-        //华沙：94.156.99.10
+        //理工云服务器：http://192.168.199.88
         httpServletResponse.setHeader("Access-Control-Allow-Origin","http://localhost:8081");
     }
 }

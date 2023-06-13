@@ -1,19 +1,19 @@
 package com.fsnteam.fsnweb.util;
 
 public enum  ReturnCode implements IReturnCode {
-    SUCCESS(200,"操作成功"),
-    LOST(400,"资源未找到"),
-    SERVERERROR(500,"服务器内部错误"),
-    USER_ACCOUNT_DISABLE(308,"账号被禁用"),
-    ARITHMETIC_EXCEPTION(501,"服务器内部计算异常"),
-    OPTION_FAILED(502,"操作失败"),
-    USER_NOT_FOUND(301,"未找到该用户"),
-    USER_CREDENTIALS_ERROR(302,"密码错误"),
-    USER_ACCOUNT_EXPIRED(303,"账号过期"),
-    USER_ACCOUNT_NOT_EXIST(304,"用户不存在"),
-    COMMON_FAIL(305,"其他错误"),
-    USER_ACCOUNT_LOCKED(306,"账号锁定"),
-    AUTHORITY_ERROR(307,"无访问权限");
+    SUCCESS(200,"Success"),
+    LOST(400,"RESOURCE LOST"),
+    SERVERERROR(500,"Server error"),
+    USER_ACCOUNT_DISABLE(308,"account is forbidden"),
+    ARITHMETIC_EXCEPTION(501,"ARITHMETIC_EXCEPTION"),
+    OPTION_FAILED(502,"Invalid option"),
+    USER_NOT_FOUND(301,"can't find this user"),
+    USER_CREDENTIALS_ERROR(302,"password incorrect"),
+    USER_ACCOUNT_EXPIRED(303,"USER_ACCOUNT_EXPIRED"),
+    USER_ACCOUNT_NOT_EXIST(304,"USER_ACCOUNT_NOT_EXIST"),
+    COMMON_FAIL(305,"COMMON_FAIL"),
+    USER_ACCOUNT_LOCKED(306,"USER_ACCOUNT_LOCKED"),
+    AUTHORITY_ERROR(307,"DON'T HAVE AUTHORITY");
 
     private Integer code;
 

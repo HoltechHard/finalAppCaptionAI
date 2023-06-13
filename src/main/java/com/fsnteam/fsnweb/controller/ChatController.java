@@ -45,8 +45,6 @@ public class ChatController {
         SseEmitter sseEmitter = new SseEmitter(0l);
         String uid = SecurityContextHolder.getContext().getAuthentication().getName();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(principal);
-        System.out.println(SecurityContextHolder.getContext().getAuthentication());
 //        String uid = headers.get("uid");
         if (StrUtil.isBlank(uid)) {
             throw new BaseException(CommonError.SYS_ERROR);
@@ -82,7 +80,6 @@ public class ChatController {
         OpenAIEventSourceListener openAIEventSourceListener = new OpenAIEventSourceListener(sseEmitter);
         openAiStreamClient.streamChatCompletion(messages, openAIEventSourceListener);
         LocalCache.CACHE.put(uid, JSONUtil.toJsonStr(messages), LocalCache.TIMEOUT);
-        System.out.println("uid:"+uid+" messages:"+messages);
         return sseEmitter;
     }
 }

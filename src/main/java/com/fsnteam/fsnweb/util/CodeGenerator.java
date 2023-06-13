@@ -53,17 +53,17 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://101.43.161.104/fsn?useSSL=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&allowMultiQueries=true");
+        dsc.setUrl("jdbc:mysql://192.168.199.88:3306/polytechnic?useSSL=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&allowMultiQueries=true");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("LsY18135651179.");
+        dsc.setUsername("username");
+        dsc.setPassword("polytechnic");
         dsc.setDbType(DbType.MYSQL);
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
+        pc.setModuleName(scanner("模块名（如fsnweb）"));
         pc.setParent("com.fsnteam");
         pc.setController("controller");
         pc.setService("service");
